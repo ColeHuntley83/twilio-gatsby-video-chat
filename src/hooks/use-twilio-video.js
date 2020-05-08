@@ -90,6 +90,7 @@ const handleRemoteParticipant = container => participant => {
 };
 
 const useTwilioVideo = () => {
+  
   const [store, dispatch] = useContext(TwilioVideoContext);
   const videoRef = useRef();
   const { room, token, activeRoom } = store;
@@ -97,7 +98,7 @@ const useTwilioVideo = () => {
   const getParticipantToken = async ({ identity, room }) => {
     const result = await axios({
       method: 'POST',
-      url: 'https://jasmine-greyhound-8600.twil.io/create-room-token',
+      url: 'https://malachite-mole-9844.twil.io/create-token',
       data: { identity, room },
     });
 

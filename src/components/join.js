@@ -7,6 +7,7 @@ const Join = ({ location }) => {
   const { getParticipantToken, room: roomName, token } = useTwilioVideo();
   const [identity, setIdentity] = useState('');
   const [room, setRoom] = useState(defaultRoom);
+  
 
   useEffect(() => {
     if (token && roomName) {
